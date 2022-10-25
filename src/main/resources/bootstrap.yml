@@ -3,6 +3,14 @@
 spring:
   application:
     name: config-server
+  profiles:
+    active: native
+
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/config
 
 # 스프링 클라우드 컨피그 서비스가 수신 대기할 포트
 server:
